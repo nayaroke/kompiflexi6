@@ -13,14 +13,6 @@ function openMobilemenu(){var e=document.getElementById("mobile-menu-nav");"bloc
 
 function showhidemenu(){var e=document.getElementById("drop_menu");"block"!==e.style.display?e.style.display="block":e.style.display="none"};
 
-var disqus_url=disqus_blogger_current_url;!function(){"use strict";var e=function(){var e=document.getElementById("comments");return e||(e=document.getElementById("disqus-blogger-comment-block")),e},t=e();if(t){var d=document.createElement("div");d.id="disqus_thread",t.innerHTML="",t.appendChild(d),t.style.display="block";var n=document.createElement("script");n.async=!0,n.src="//"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.body).appendChild(n)}}();
-
-function toggleVisibility(i){visibleDivId=visibleDivId===i?null:i,hideNonVisibleDivs()}function hideNonVisibleDivs(){var i,l,e;for(i=0;i<divs.length;i++)l=divs[i],e=document.getElementById(l),visibleDivId===l?e.style.display="block":e.style.display="none"}var divs=["disqus-box","blogger-box","facebook-box"],visibleDivId=null;
-
-$(".commentbtn").click(function (e) {
-$(this).addClass("btncurrent").siblings().removeClass("btncurrent");
-});
-
 !function(t){var e=t("a.blog-pager-newer-link"),l=t("a.blog-pager-older-link");t.get(e.attr("href"),function(l){e.html(t(l).find(".post h1.post-title").text())},"html"),t.get(l.attr("href"),function(e){l.html(t(e).find(".post h1.post-title").text())},"html")}(jQuery);
 
 function loadscript(t){var r=document.createElement("script");r.setAttribute("type","text/javascript"),r.setAttribute("src",t),document.getElementsByTagName("head")[0].appendChild(r)}function urltinyfyprompt_callback(t){waitElm&&(waitElm.style.display="none");var r="Short URL";t.title&&""!=t.title?r+=' for "'+t.title+'"':t.longurl&&""!=t.longurl&&(r+=" for "+t.longurl),t.tinyurl&&""!=t.tinyurl?prompt(r+":",t.tinyurl):alert("Could not get short URL, try again later."+(t.error&&""!=t.error?"nError: "+t.error:""))}function shortenUrl(t,r,l){waitElm=t.parentNode.nextSibling,waitElm&&(waitElm.style.display="inline"),loadscript("https://urltinyfy.appspot.com/"+l+"?unify=1&url="+encodeURIComponent(r)+"&callback=urltinyfyprompt_callback")}var waitElm=null;
